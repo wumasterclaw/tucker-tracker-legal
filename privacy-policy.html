@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tucker Tracker — Privacy Policy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<a class="badge" href="index.html">← Tucker Tracker legal pages</a>
+<h1>Privacy Policy</h1>
+<div class="meta">Last updated: 12 September 2026</div>
+
+<div class="status">
+<strong>Status:</strong> accurate as of the date above, published to support Internal testing, but not yet reviewed by a lawyer. A small number of items below are still marked <code>[PLACEHOLDER]</code> and will be finalised as those business/technical details are confirmed. This page will be replaced by a version on Tucker Tracker's own domain once that's registered.
+</div>
+
+<h2>Who we are</h2>
+<p>Tucker Tracker ("<strong>we</strong>", "<strong>us</strong>", "<strong>our</strong>") is operated by xCalibre-AI, a sole trader based in Australia (ABN not yet registered). We are an Australian business and Australia is our home market, so we are bound by the Australian Privacy Principles (APPs) under the <em>Privacy Act 1988</em> (Cth) as our baseline standard for handling your personal information, regardless of where you are.</p>
+<p>Tucker Tracker is also available to users outside Australia. If you are in the European Economic Area or the United Kingdom, the General Data Protection Regulation ("<strong>GDPR</strong>") and the UK GDPR also apply to our handling of your personal information; if you are in the United States, applicable state privacy laws (such as the California Consumer Privacy Act, as amended by the California Privacy Rights Act — "<strong>CCPA/CPRA</strong>") also apply. Where any of these laws gives you a right beyond what the APPs already provide, that right is described in "Additional rights for EU/UK and US users" below. We do not maintain separate, region-specific versions of this policy — the same practices described here apply to every user, and the additional-rights section simply makes explicit what those practices mean in GDPR/CCPA terms.</p>
+<p>This policy explains what personal information Tucker Tracker collects, how we use and store it, and how you can access, correct, or delete it.</p>
+
+<h2>What personal information we collect</h2>
+<ul>
+<li><strong>Account information</strong>: your email address, first name, and last name, provided when you create an account.</li>
+<li><strong>Profile/goal information used to calculate your daily energy target</strong>: age, weight, height, gender, activity level, and weight goal, entered during onboarding ("Setup"). <strong>We do not store these values themselves</strong> — they're used on your device to calculate a daily kilojoule target, and only that resulting number (e.g. "7,500 kJ/day") is saved to your account, so it carries across your devices and sign-ins.</li>
+<li><strong>Diary/food logging data</strong>: the foods, quantities, and meal types you log, and when you logged them.</li>
+<li><strong>Custom foods</strong>: any food you create yourself (name, serving size, energy/macronutrient values), if the catalog doesn't already have what you're looking for.</li>
+<li><strong>Photos and text submitted for AI-assisted logging</strong>: if you photograph a meal, photograph a nutrition label, or describe a meal by typing or speaking it, that photo or text is sent to Google's Gemini API (see "Who we share your information with" below) to identify the food and estimate its nutrition. When you use voice entry, your device's own speech-to-text converts your voice to text on-device before you review and submit it — we never receive or transmit the audio recording itself, only the resulting text. We don't retain the photo or text itself once the request completes; only the food items and amounts you go on to confirm are saved to your diary.</li>
+<li><strong>Units preference</strong>: whether you've chosen to see energy values in kilojoules or Calories.</li>
+<li><strong>Technical information collected automatically</strong> by our infrastructure provider (Supabase) as part of operating the service — for example, IP address and timestamps associated with sign-in activity, standard for any cloud-hosted application. <code>[PLACEHOLDER: confirm exactly what Supabase's own logs retain and for how long, per Supabase's own documentation/DPA, and reflect that here rather than this generic description.]</code></li>
+</ul>
+
+<h3>What we deliberately do <strong>not</strong> collect or store</h3>
+<ul>
+<li><strong>Biometric data.</strong> If you enable the optional Face ID/Touch ID/fingerprint app-lock, your device's own operating system performs that check directly — Tucker Tracker only ever receives a yes/no result ("unlocked" or "not unlocked"). We never receive, see, or store any actual biometric data (fingerprint images, face scans, or similar).</li>
+<li><strong>Payment/financial information.</strong> Payment for a subscription or one-time purchase is handled entirely by Apple's App Store or Google Play — we never receive or store your card, bank, or other payment details. When you complete a purchase, our servers receive only a transaction identifier (Apple) or purchase token (Google), used solely to verify the purchase with Apple/Google and activate the corresponding subscription tier on your account.</li>
+<li><strong>Advertising or analytics tracking.</strong> As of this policy's drafting, Tucker Tracker does not use any third-party advertising network or analytics SDK. <code>[PLACEHOLDER: update this section if that changes.]</code></li>
+</ul>
+
+<h2>How we use your information</h2>
+<p>We use your personal information to:</p>
+<ul>
+<li>create and manage your account, and let you sign in;</li>
+<li>calculate your personalised daily energy and macronutrient targets;</li>
+<li>record and display your food diary, streaks, and badges;</li>
+<li>let you switch between kilojoule and Calorie display;</li>
+<li>respond to support requests and enforce our terms of use;</li>
+<li>meet our own legal obligations (for example, the Notifiable Data Breaches scheme — see "If something goes wrong" below).</li>
+</ul>
+<p>We do not use your personal information for any purpose beyond providing and improving Tucker Tracker.</p>
+
+<h2>Where your information is stored</h2>
+<p>Your information is stored using Supabase, a third-party cloud infrastructure provider, in a Postgres database. Access to your data is restricted using Row-Level Security policies enforced by the database itself — in practice, this means our own systems are built so that only you (and, for a small number of operations that need elevated access, our server-side functions acting on your explicit request, such as account deletion) can read or change your own data.</p>
+<p><strong>Cross-border disclosure</strong>: <code>[PLACEHOLDER: confirm which geographic region your Supabase projects are hosted in and disclose that clearly here — Australian Privacy Principle 8 requires telling you if your information may be stored or processed outside Australia. If any user information is or may be transferred outside the EU/UK, GDPR/UK GDPR also requires naming the safeguard relied on.]</code></p>
+<p>All connections between the Tucker Tracker app and our servers are encrypted in transit (HTTPS/TLS). Your session is stored securely on your device (iOS Keychain / Android Keystore), not in plain, easily-readable app storage.</p>
+
+<h2>Who we share your information with</h2>
+<ul>
+<li><strong>Supabase</strong> (our infrastructure provider) hosts the database, authentication, and server-side functions described above. They process your information on our behalf, under their own terms — see <a href="https://supabase.com/privacy">Supabase's privacy policy</a>.</li>
+<li>We do not sell your personal information, and we do not share it with third parties for their own marketing purposes.</li>
+<li><strong>Google Gemini API</strong> processes any meal photo, nutrition label photo, or meal description (typed, or spoken and converted to text on your device) you submit for AI-assisted logging — sent solely to identify the food and estimate its nutrition. See <a href="https://ai.google.dev/gemini-api/terms">Google's Gemini API terms</a>.</li>
+</ul>
+
+<h2>Your rights: access, correction, and deletion</h2>
+<ul>
+<li><strong>Export your data</strong>: from Account → "Export my data", you can download a copy of everything you've logged.</li>
+<li><strong>Delete your account</strong>: from Account → "Manage account" → "Delete my account", you can permanently delete your account and all associated data at any time, after confirming your password. This cannot be undone. See our <a href="account-deletion.html">Account Deletion page</a> for full detail, including how to request deletion without opening the app.</li>
+<li><strong>Correct your information</strong>: you can update your name, units preference, and goal information at any time from within the app.</li>
+<li>If you'd like to exercise any of these rights in a way the app doesn't yet support directly, contact us at <a href="mailto:wumasterclaw@gmail.com">wumasterclaw@gmail.com</a>.</li>
+</ul>
+
+<h2>Additional rights for EU/UK and US users</h2>
+<p>The rights above (export, deletion, correction) already satisfy most of what GDPR and US state privacy laws require, since they let you access, correct, and delete your data at any time without needing to contact us at all. This section makes the specific legal bases explicit for users those laws cover.</p>
+
+<h3>If you are in the EU/UK (GDPR/UK GDPR)</h3>
+<ul>
+<li><strong>Legal basis for processing</strong>: we process your account and diary information to perform our contract with you (providing the app's core functionality) and, for the technical/security information described above, our legitimate interest in operating the service reliably and securely.</li>
+<li><strong>Your rights</strong> include access, rectification, erasure, restriction of processing, data portability, and objection to processing — the in-app "Export my data" and "Delete my account" features are how you exercise access/portability and erasure directly; contact us (above) for rectification, restriction, or objection requests the app doesn't yet support as a self-service action.</li>
+<li><strong>International data transfers</strong>: see "Cross-border disclosure" above, which covers both the APP 8 and GDPR/UK GDPR transfer-disclosure requirements together.</li>
+<li><strong>Right to complain</strong>: you can lodge a complaint with your local supervisory authority (in the UK, the Information Commissioner's Office; in the EU, your national data protection authority) if you believe we have not handled your information properly.</li>
+<li><code>[PLACEHOLDER: if we are required to appoint an EU or UK representative under Article 27 GDPR / UK GDPR once real user numbers from those regions are known, name them and their contact details here.]</code></li>
+</ul>
+
+<h3>If you are in the United States (state privacy laws, e.g. California's CCPA/CPRA)</h3>
+<ul>
+<li><strong>We do not sell or "share" your personal information</strong> (as those terms are defined under CCPA/CPRA) for cross-context behavioural advertising — we don't use any advertising or analytics SDK at all, so there is nothing to opt out of, but you have that right regardless.</li>
+<li><strong>Your rights</strong> include the right to know what personal information we collect and why (this policy), the right to delete it ("Delete my account"), and the right to correct inaccurate information (editable in-app). We do not discriminate against you for exercising any of these rights.</li>
+<li>There is no single comprehensive US federal privacy law; other states (e.g. Virginia, Colorado, Connecticut) have their own, broadly similar laws that this section is also intended to address. <code>[PLACEHOLDER: confirm with a lawyer whether any state-specific disclosure beyond this general statement is needed once real user numbers by state are known.]</code></li>
+</ul>
+
+<h2>How long we keep your information</h2>
+<p>We keep your information for as long as your account remains active. If you delete your account, your profile and diary data are permanently deleted immediately — this is enforced at the database level (deleting your account cascades to delete your diary entries and profile automatically), not just hidden from view.</p>
+
+<h2>Children's privacy</h2>
+<p>Tucker Tracker is not directed at, and is not intended for use by, anyone under 18 — consistent with the target audience declared in the Google Play Store listing. We do not knowingly collect personal information from anyone under 18.</p>
+
+<h2>If something goes wrong</h2>
+<p>If we become aware of a data breach that is likely to result in serious harm to you, we will notify you and the Office of the Australian Information Commissioner (OAIC) in accordance with the Notifiable Data Breaches scheme.</p>
+
+<h2>Complaints</h2>
+<p>If you have a concern about how we've handled your personal information, please contact us first at <a href="mailto:wumasterclaw@gmail.com">wumasterclaw@gmail.com</a>. If you're not satisfied with our response, you can lodge a complaint with the OAIC at <a href="https://www.oaic.gov.au">www.oaic.gov.au</a>.</p>
+
+<h2>Changes to this policy</h2>
+<p>We may update this policy from time to time. We'll update the "Last updated" date at the top of this page when we do, and let you know in the app if a change is significant.</p>
+
+<h2>Contact us</h2>
+<p>xCalibre-AI — <a href="mailto:wumasterclaw@gmail.com">wumasterclaw@gmail.com</a>. <code>[PLACEHOLDER: a postal address once one is nominated for the business — not required for a sole trader operating without registered premises, but worth confirming with a lawyer during review.]</code></p>
+
+<footer>Tucker Tracker is developed by xCalibre-AI.</footer>
+</div>
+</body>
+</html>
